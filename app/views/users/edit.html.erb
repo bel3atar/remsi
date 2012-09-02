@@ -1,0 +1,16 @@
+<legend>Éditer vos identifiants E.M.S.I.</legend>
+<%= form_for @user, html: { class: 'form-horizontal' }  do |f| %>
+	<div class="control-group">
+		<%= f.label :mat, 'Matricule E.M.S.I.', class: 'control-label' %>
+		<%= content_tag :div, f.text_field(:mat, placeholder: 'Matricule'), 
+		class: 'controls' %>
+	</div>
+	<div class="control-group">
+		<%= f.label :mat, 'Mot de passe', class: 'control-label' %>
+		<%= content_tag :div, f.password_field(:pwd, placeholder: 'Mot de passe'),
+		class: 'controls' %>
+	</div>
+	<div class="control-group">
+		<%= f.submit 'Enregister', class: 'controls btn btn-primary' %>
+	</div>
+<% end %>

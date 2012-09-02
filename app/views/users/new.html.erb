@@ -1,0 +1,37 @@
+<% provide :title, 'Inscription' %>
+<div class="row">
+	<div class="offset3 span6">
+	<legend>S'inscrire à rEMSI</legend>
+		<%= form_for @user, html: {class: 'form-horizontal'} do |f| %>
+			<%= render 'shared/error_messages' %>
+			<div class="control-group">
+		    <%= f.label :email, class: 'control-label' %>
+		    <div class="controls">
+		      <%= f.text_field :email, placeholder: 'utilisateur@example.com' %>
+		    </div>
+		  </div>
+
+			<div class="control-group">
+		    <%= f.label :password, 'Mot de passe', class: 'control-label' %>
+		    <div class="controls">
+		      <%= f.password_field :password, placeholder: 'Mot de passe' %>
+		    </div>
+		  </div>
+
+			<div class="control-group">
+		    <%= f.label :password_confirmation, 'Confirmer', class: 'control-label' %>
+		    <div class="controls">
+		      <%= f.password_field :password_confirmation, placeholder: 'Mot de passe' %>
+		    </div>
+		  </div>
+
+			<div class="control-group">
+		    <div class="controls">
+		      <%= f.submit 'Valider', class: 'btn btn-primary' %>
+		    </div>
+		  </div>
+			
+		<% end %>
+	</div>
+	</div>
+</div>

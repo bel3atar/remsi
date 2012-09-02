@@ -1,0 +1,9 @@
+<div class="hero-unit">
+	<h1>Bienvenue à rEMSI</h1>
+	<p>re-EMSI est tentative de créer une expérience plus agréable aux visiteurs du site officiel de l'E.M.S.I.</p>
+	<p>Pas besoin de s'inscrire, connectez-vous maintenant avec <%= link_to 'Facebook', 'https://www.facebook.com' %> pour rejoindre les autres Emsistes.</p>
+	<p>Il y a actuellement <%= pluralize User.count, 'utilisateur' %>.</p>
+	<p>
+	</p>
+	<%= link_to 'Se connecter', '/auth/facebook', class: 'btn' %>
+</div>

@@ -1,0 +1,24 @@
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<%= link_to 'rEMSI', root_path, class: 'brand' %>
+			<ul class="nav pull-right	">
+					<% if logged_in? %>
+						<li>
+							<a href="<%= signout_path %>">
+								<i class="icon-off icon-white"> </i>Se déconnecter
+							</a>
+						</li>
+					<% else %>
+						<%= link_tag 'Accueil', 'home', 'static_pages', root_path,
+												 'icon-home icon-white' %>
+						<li>
+							<a href="/auth/facebook">
+								<i class="icon-ok-sign icon-white"> </i>Se connecter
+							</a>
+						</li>
+					<% end %>
+			</ul>
+		</div>
+	</div>
+</div>
